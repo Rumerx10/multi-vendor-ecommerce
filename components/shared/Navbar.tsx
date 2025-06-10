@@ -10,10 +10,12 @@ const Navbar = () => {
   const [language, setLanguage] = useState("EN");
 
   const toggleLanguageMenu = () => {
+    setProfileOpen(false);
     setLanguageOpen((prev) => !prev);
   };
 
   const toggleProfileMenu = () => {
+    setLanguageOpen(false);
     setProfileOpen((prev) => !prev);
   };
 
@@ -98,13 +100,13 @@ const Navbar = () => {
 
               {profileOpen && (
                 <ul className="absolute top-12 right-0 bg-white border border-borderGray rounded-lg p-1 shadow-md z-50 w-40">
-                  <div className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  <div onClick={()=>setProfileOpen(false)} className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                     Profile
                   </div>
-                  <div className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  <div onClick={()=>setProfileOpen(false)} className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                     Settings
                   </div>
-                  <div className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  <div onClick={()=>setProfileOpen(false)} className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                     Logout
                   </div>
                 </ul>
