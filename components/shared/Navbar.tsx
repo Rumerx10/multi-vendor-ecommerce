@@ -25,8 +25,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex flex-col w-full items-center justify-center">
-      <section className="lg:container flex items-center justify-between px-4 mx-auto h-24 py-7 relative">
+    <div className="z-40 bg-white fixed left-0 right-0 top-0 flex flex-col w-full items-center justify-center border-b border-borderGray">
+      <section className="lg:container flex items-center justify-between px-4 mx-auto h-24 py-7">
         <h1>
           <LogoSvg />
         </h1>
@@ -100,13 +100,22 @@ const Navbar = () => {
 
               {profileOpen && (
                 <ul className="absolute top-12 right-0 bg-white border border-borderGray rounded-lg p-1 shadow-md z-50 w-40">
-                  <div onClick={()=>setProfileOpen(false)} className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  <div
+                    onClick={() => setProfileOpen(false)}
+                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                  >
                     Profile
                   </div>
-                  <div onClick={()=>setProfileOpen(false)} className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  <div
+                    onClick={() => setProfileOpen(false)}
+                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                  >
                     Settings
                   </div>
-                  <div onClick={()=>setProfileOpen(false)} className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  <div
+                    onClick={() => setProfileOpen(false)}
+                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                  >
                     Logout
                   </div>
                 </ul>

@@ -1,5 +1,5 @@
 import Dashboard from '@/components/seller/dashboard/Dashboard'
-import React from 'react'
+
 
 const page = () => {
   return (
@@ -7,4 +7,4 @@ const page = () => {
   )
 }
 
-export default page
+export default page;
